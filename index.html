@@ -1,0 +1,22 @@
+<!doctype html>
+<title>Piece Of Shit Technology</title>
+<link rel="stylesheet" href="style.css"/>
+<div id="holder">
+    <a>
+        <h1></h1>
+    <a>
+</div>
+<script>
+ var piecesOfShit = [
+     {
+         name: 'PHP',
+         image: './images/php.jpg',
+         url: 'https://secure.php.net/manual/en/intro-whatis.php',
+     },
+ ]
+
+ var shit = piecesOfShit[~~(Math.random  * piecesOfShit.length)];
+ document.querySelector('#holder > a').href = shit.url;
+ document.querySelector('h1').innerText = shit.name;
+
+</script>
