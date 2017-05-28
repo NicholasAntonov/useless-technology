@@ -1,6 +1,5 @@
 <!doctype html>
 <title>Piece Of Shit Technology</title>
-<link rel="stylesheet" href="style.css"/>
 <style>
 body {
     font-family: "Franklin Gothic Medium", sans-serif;
@@ -36,6 +35,7 @@ a:active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
     animation-name: intro;
     animation-duration: 3s;
     animation-delay: 0.3s
@@ -53,9 +53,13 @@ h1, a {
 h1 {
     display: none;
 }
+
+ .hide {
+     display: none;
+}
 </style>
 <div id="holder">
-    <a class="main-link">
+    <a class="main-link hide">
         <h1></h1>
         <img/>
     </a>
@@ -79,5 +83,6 @@ h1 {
  document.querySelector('h1').innerText = shit.name;
  document.querySelector('img').src = shit.image;
  document.querySelector('img').alt = shit.name;
+ document.querySelector('.main-link').classList.remove('hide');
 
 </script>
