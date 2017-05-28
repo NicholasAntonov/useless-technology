@@ -2,21 +2,29 @@
 <title>Piece Of Shit Technology</title>
 <link rel="stylesheet" href="style.css"/>
 <div id="holder">
-    <a>
+    <a class="main-link">
         <h1></h1>
-    <a>
+        <img/>
+    </a>
 </div>
 <script>
  var piecesOfShit = [
      {
          name: 'PHP',
-         image: './images/php.jpg',
+         image: './images/php.png',
          url: 'https://secure.php.net/manual/en/intro-whatis.php',
+     },
+     {
+         name: 'JQuery',
+         image: './images/jquery.gif',
+         url: 'https://jquery.com/',
      },
  ]
 
- var shit = piecesOfShit[~~(Math.random  * piecesOfShit.length)];
+ var shit = piecesOfShit[~~(Math.random()  * piecesOfShit.length)];
  document.querySelector('#holder > a').href = shit.url;
  document.querySelector('h1').innerText = shit.name;
+ document.querySelector('img').src = shit.image;
+ document.querySelector('img').alt = shit.name;
 
 </script>
